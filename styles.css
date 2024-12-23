@@ -1,0 +1,30 @@
+@font-face {
+	font-family: "Convection";
+	src:
+		url("Convc.woff") format("woff"); }
+
+body {
+	background-color:rgb(124, 81, 135);
+}
+
+h1, p, div {
+	text-align: center;
+	font-family: Convection;
+	color: white;}
+
+nav a {
+	color: white; filter: drop-shadow(2px 2px 2px #352508); }
+nav div {
+	color: black; }
+
+nav {
+	margin: auto;
+	width: 500px;
+	padding: 3px 0px 7px;
+	font-family: Convection;
+	font-weight: normal;
+	font-size: 1.5em;
+	border-style: ridge;
+	border-color: white;
+	border-radius: 2px; }
+
