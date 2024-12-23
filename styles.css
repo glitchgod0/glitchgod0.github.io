@@ -4,8 +4,10 @@
 		url("Convc.woff") format("woff"); }
 
 body {
-	background-color:rgb(124, 81, 135);
-}
+	padding-top: 5px;
+	margin: auto;
+	width: 700px;
+	background-color: rgb(124, 81, 135)}
 
 h1, p, div {
 	text-align: center;
@@ -26,5 +28,6 @@ nav {
 	font-size: 1.5em;
 	border-style: ridge;
 	border-color: white;
-	border-radius: 2px; }
+	border-radius: 2px; 
+	background-color: rgb(124, 81, 135) }
 
