@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>glitchgods site - main</title>
+	<link rel="stylesheet" href="../blogstyles.css">
+</head>
+	<nav>
+		<div class="usable-area">
+				| <a href="../../index.html">Home</a> | 
+				<a href="../../research.html">Research</a> | 
+				<a href="../../contact.html">Contact</a> |
+		</div>
+	</nav>
+    <body>
+        <h1>Patching Harmonix Checksums</h1>
+
+        <h2>Note:</h2>
+        <p>InvoxiPlayGames made a much better and easier tutorial about this on the <a href="https://milo.ipg.pw/index.php/Patches/No_Checksum">Milo Modding Wiki</a>.</p> 
+
+        <h2>Intro</h2>
+        <p>
+Have you ever tried to mod a Harmonix game after Guitar Hero 2's 360 port and noticed the game give an error on startup? That is due to the checksum which validates the data files and is surprisingly simple to patch out with Ghidra and a hex editor (such as ImHex or 010 Editor).</p>
+
+		<h2>Set Up</h2>
+		<h3>Prerequisites</h3>
+        <ol>
+        	<li>Download <a href="https://github.com/NationalSecurityAgency/ghidra/releases">Ghidra</a> and the <a href="https://github.com/zeroKilo/XEXLoaderWV/releases">Xbox 360 extension</a>.</li>
+ 			<li>Download a hex editor (I recommend <a href="https://github.com/WerWolv/ImHex/releases">ImHex</a>).</li>
+ 			<li>Download <a href="https://digiex.net/threads/xextool-6-3-download.9523/">XexTool</a>.</li>
+		</ol> 
+		<h3>Ghidra Setup</h3>
+		<ul>
+			<li>Open Ghidra and click on File > New Project > Non-Shared > and name your project.</li>
+			<li>Click on File > Install Extensions > + > the extension .zip file and then restart Ghidra once installed.</li>
+			<li>File > Import File > Choose the "Default.xex" file from your game.</li>
+			<li>Click on the "Default.xex" file in the Ghidra window to open the CodeBrowser.</li>
+		</ul>
+		<h3>XEX Preparation</h3>
+		<ul>
+			<li>Copy the games "Default.xex" file to your XexTool folder.</li>
+			<li>Open a Terminal or CMD window and navigate to your XexTool folder.</li>
+			<li>Type "xextool.exe -e u -c u -o Edited.xex Default.xex". If you are on Linux you will have to use Wine to run XexTool.</li>
+		</ul>
+
+		<h2>Finding the HandleError Function</h2>
+		<p>
+Once the CodeBrowser window is open it should ask whether to run auto-analyze, click on Yes and then the Analyze button. This will take a bit, once completed it should ask you about visiting Entry. Once the analysis has completed, click on Search > For Strings and filter for the word "checksum".</p>
+<img src="ChecksumGuide-StringSeach.png" style="width:100%;">
+		<p>Notice the two highlighted strings in the photo "No checksum found for file %s\n" and "Checksum failure for file %s\n", these two strings will lead us towards the HandleError function. Double click on one of them.</p>
+		<img src="ChecksumGuide-XRef.png" style="width:100%;">
+		<p>This is the string of words, we want the actual code that uses this. To go the code that uses this string, click on the Function text displayed to the right of the green "XREF" text.</p>
+		<img src="ChecksumGuide-Function.png" style="width:100%;">
+		<p>This is the segment of disassembled code that handles checksum errors. The last function in that block is always "HandleError". Highlight the last function and click on Window > Bytes.</p>
+		<img src="ChecksumGuide-Bytes.png" style="width:100%;">
+		<p>Note down the 4 highlighted bytes, in my case "4B A7 84 F9". Copy the whole line and the lines above and below. Open the Edited.xex from the XexTool Folder in your hex editor of choice. Find the 3 lines of bytes you copied from Ghidra in the binary. Replace the 4 bytes you noted down earlier and replace them with "60 00 00 00", This is the PowerPC No-Operation command, this will cause the game to completely skip over the function that errors out the game.
+Follow the previous instructions for the other checksum string you searched for earlier.</p>
+
+		<h2>Repacking the XEX</h2>
+		<p>After using a hex editor to nop the 2 HandleError functions out the game you might notice the game does not boot on console now, giving a "Game Error", This is because retail RGH/JTAG consoles do not support unencrypted XEX files (if you are running RGLoader you should be fine). To re-encrypt the game:</p>
+		<ul>
+			<li>Open a Terminal or CMD window and navigate to your XexTool folder.</li>
+			<li>Type "xextool.exe -e e -c u Edited.xex".</li>
+		</ul>
+		<p>This should now allow you to boot the game with edited Ark files.</p>
+
+		<h4>Made on 09/07/2024, Remade 11/01/2025</h4>
+    </body>
+</html>
