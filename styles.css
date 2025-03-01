@@ -53,7 +53,7 @@
     text-decoration: none;   /* Removes underline */
     font-weight: bold;       /* Makes text bold */
     padding: 0 15px;         /* Adds space around links */
-    display: block;
+    display: block;         /* make sure all entries are on new lines*/
     margin-top: 15px;       /* makes space above the text */
     margin-bottom: 15px;    /* makes space below the text */
 }
