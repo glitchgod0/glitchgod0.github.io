@@ -1,0 +1,91 @@
+@font-face {
+	font-family: "Convection";
+	src:
+		url("Convc.woff") format("woff"); }
+
+/* handles the image and the text at the top */
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Keeps the image left-aligned */
+    position: relative;
+    margin-bottom: 10px; /* Adds spacing between the logo and nav */
+}
+
+.logo img {
+    border: 3px solid #333; /* solid green border */
+    max-width: 150px; /* Adjust the logo size */
+    height: auto;
+}
+
+
+/* handles navigation bar below the logo */
+.header-box {
+    background-color: #333;  /* Dark background */
+    padding: 10px;           /* Adds some spacing */
+    color: black;           /* Make sure dividers are black */
+    text-align: center;      /* Centers the links */
+}
+
+.header-box a {
+    color: white;            /* White text */
+    text-decoration: none;   /* Removes underline */
+    font-weight: bold;       /* Makes text bold */
+    padding: 0 15px;         /* Adds space around links */
+}
+
+.header-box a:hover {
+    color: #f77eeb;          /* Changes color on hover */
+}
+
+
+/* Bullet Points List */
+.research-list {
+    background-color: #333;  /* Dark background */
+    padding: 10px;           /* Adds some spacing */
+    color: black;           /* Make sure dividers are black */
+    text-align: center;      /* Centers the links */
+    display: inline-block;   /* Make box width fit content */
+}
+
+.research-list a, li {
+    color: white;            /* White text */
+    text-decoration: none;   /* Removes underline */
+    font-weight: bold;       /* Makes text bold */
+    padding: 0 15px;         /* Adds space around links */
+    display: block;
+    margin-top: 15px;       /* makes space above the text */
+    margin-bottom: 15px;    /* makes space below the text */
+}
+
+.research-list a:hover {
+    color: #f77eeb;          /* Changes color on hover */
+}
+
+/* handles the socials bar */
+.socials-box {
+    background-color: #333;  /* Dark background */
+    padding: 10px;           /* Adds some spacing */
+    color: black;           /* Make sure dividers are black */
+    text-align: center;      /* Centers the links */
+    display: inline-block;   /* Make box width fit content */
+}
+
+.socials-box a {
+    color: white;            /* White text */
+    text-decoration: none;   /* Removes underline */
+    font-weight: bold;       /* Makes text bold */
+    padding: 0 15px;         /* Adds space around links */
+}
+
+.socials-box a:hover {
+    color: #f77eeb;          /* Changes color on hover */
+}
+
+/* universal stuff */
+body {
+    text-align: center;      /* Centers the links */
+    color: #333;                /* White text */
+    font-family: Convection;    /* change font */
+    background-color: #f77eeb;  /* pink bg */
+}
