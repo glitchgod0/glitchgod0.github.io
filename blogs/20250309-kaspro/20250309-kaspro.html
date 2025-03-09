@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>glitchgods site - blog</title>
+	<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<nav>
+    <div class="logo">
+        <img src="../../furrychap.jpg" alt="Website Logo">
+        <h1>glitchgods site.</h1>
+    </div>
+
+	<div class="header-box">
+		| <a href="../../index.html">Home</a> | 
+		<a href="../../research.html">Research</a> | 
+		<a href="../../contact.html">Contact</a> |
+	</div>
+</nav>
+
+<body>
+	<div class="blog">
+		<h1>Kaspro</h1>
+
+		<h2>Intro</h2>
+
+		<p>Early on, Harmonix made many mistakes pertaining to keeping development only files away from compiled discs. Many files have been released this way, from minor CVS files to entire source DTA scripts with comments. In a prototype for Karaoke Revoltion given to the press, they left an entire windows tool in the files.</p>
+
+		<h2>Disc and Ark Extraction</h2>
+
+		<p>You will need these items:</p>
+
+		<ol>
+			<li>- The Karaoke Revoltuion July 18th 2003 PS2 Prototype.</li>
+			<li>- <a href="https://CHANGETHELINK">Mackiloha</a>. - To extract the arks</li>
+			<li>- <a href="https://CHANGETHELINK">dtab</a>. - To convert the DTB files to DTA.</li>
+			<li>- [Linux Only] bchunk. - To convert the bin/cue to iso.</li>
+			<li>- [Windows Only] ImgBurn. - To convert the bin/cue to iso.</li>
+		</ol> 
+
+		<h3>Linux Disc Setup</h3>
+		<p>Open a Terminal window and paste this: <code>bchunk PS2\ -\ Karaoke\ Revolution\ Preview\ Code\ 07-18-03.bin PS2\ -\ Karaoke\ Revolution\ Preview\ Code\ 07-18-03.cue  KR20030718.iso
+</code> once the file has been converted to ISO, you can extract it like a zip file using something like 7z or Ark</p>
+
+		<h3>Windows Disc Setup</h3>
+		<p>TODO</p>
+
+		<h3>Ark Extraction</h3>
+		<p>Once the ISO has been extracted, Copy arkhelper and dtab and place it in the GEN folder then open the GEN folder in a Terminal window.</p>
+
+		<p>
+		If you're using Linux, Type:<br>
+		<code>./arkhelper ark2dir MAIN.ARK Extracted -a -s</code></p>
+
+		<p>
+		If you're using Windows, Type:
+		<code>arkhelper.exe ark2dir MAIN.ARK Extracted -a -s</code></p>
+
+		<p>Extracted files should be in GEN/Extracted</p>
+
+		<h2>Folder Setup</h2>
+
+		<p>If you navigate to GEN/Extracted/(.) - You should see 5 files.</p>
+		<ol>
+			<li>- .#arena_test.elf.1.99</li>
+			<li>- .#kaspro_r.exe.1.125</li>
+			<li>- it</li>
+			<li>- midireport.txt</li>
+			<li>- scus_972.58</li>
+		</ol> 
+		<p>If you only see 3 files, enable hidden files in your File Explorer.</p>
+
+		<p>Copy these files and paste them in the upper directory (GEN/Extracted). Rename ".#kaspro_r.exe.1.125" to just "kaspro.exe".</p>
+
+		<h2>Usage</h2>
+		<p>Open a Terminal window and open Kaspro (Type: kaspro.exe in the cmd window. use wine if on Linux). You should see that it works and prints various example commands.</p>
+
+		<p>Now FAFO to your hearts content, I will post some example commands at a future date.</p>
+
+
+
+		<h4>Made on 09/03/2025</h4>
+	</div>
+    </body>
+</html>

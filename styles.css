@@ -121,7 +121,7 @@ code {
 }
 
 
-.blog h1, h2, h3{
+.blog h2, h3{
     color: #333;                    /* White text */
     font-weight: bold;              /* Makes text bold */
     text-decoration:underline;      /* Makes links underlined */
