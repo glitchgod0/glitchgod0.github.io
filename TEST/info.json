@@ -9,6 +9,13 @@
     		"author" : "Milohax",
     		"mod-version" : "202eee3",
     		"link" : "https://glitchgod0.github.io/test/default.zip"
-    	}
+    	},
+        "gh2dx-370" : {
+            "name" : "Guitar Hero II Deluxe Xbox 360 2",
+            "desc" : "qol mod for gh2-x360",
+            "author" : "Milohax",
+            "mod-version" : "202eee3",
+            "link" : "https://glitchgod0.github.io/test/default.zip"
+        }
     }
 }
