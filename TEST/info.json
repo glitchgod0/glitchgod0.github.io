@@ -3,13 +3,20 @@
     	"LatestVersion" : 0.1
     },
     "mods" : {
-    	"gh2dx-360" : {
-    		"name" : "Guitar Hero II Deluxe Xbox 360 SMALL FILE",
+    	"gh2dx-360-7z" : {
+    		"name" : "Guitar Hero II Deluxe Xbox 360 SMALL 7Z",
     		"desc" : "qol mod for gh2-x360",
     		"author" : "Milohax",
     		"mod-version" : "202eee3",
     		"link" : "https://consolemods.org/wiki/images/5/5f/XM360.7z"
     	},
+        "gh2dx-360-zip" : {
+            "name" : "Guitar Hero II Deluxe Xbox 360 SMALL zip",
+            "desc" : "qol mod for gh2-x360",
+            "author" : "Milohax",
+            "mod-version" : "202eee3",
+            "link" : "https://consolemods.org/wiki/images/f/f9/Wii_Mini_Ethernet_Enable.zip"
+        },
         "gh2dx-360-true" : {
             "name" : "Guitar Hero II Deluxe Xbox 360 REAL LINK",
             "desc" : "qol mod for gh2-x360",
