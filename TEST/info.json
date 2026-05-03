@@ -1,0 +1,13 @@
+{
+    "core" : {
+    	"LatestVersion" : 0.1
+    },
+    "mods" : {
+    	"gh2dx-360" : {
+    		"name" : "Guitar Hero II Deluxe Xbox 360",
+    		"desc" : "qol mod for gh2-x360",
+    		"mod-version" : "202eee3",
+    		"link" : "https://github.com/hmxmilohax/Guitar-Hero-II-Deluxe-360/actions/runs/22288206057/artifacts/5610131715"
+    	}
+    }
+}
