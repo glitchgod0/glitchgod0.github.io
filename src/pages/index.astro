@@ -1,0 +1,62 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+import { Image } from 'astro:assets';
+
+import badge_milohax from '../assets/badges/mhxsprite.png';
+import badge_rb3dx from '../assets/badges/rb3dx.gif';
+import badge_dc3decomp from '../assets/badges/dc3decomp.png';
+import badge_rb3decomp from '../assets/badges/rb3decomp.png';
+import badge_jeff from '../assets/badges/jeff.png';
+import badge_yarg from '../assets/badges/yarg.gif';
+
+import badge_dark from '../assets/badges/dark.png';
+import badge_ipg from '../assets/badges/ipg.png';
+import badge_jnack from '../assets/badges/jnack.png';
+import badge_localh from '../assets/badges/localh.png';
+import badge_thardwardy from '../assets/badges/thardwardy.gif';
+
+import badge_cex from '../assets/badges/cex.jpg';
+import badge_torrents from '../assets/badges/torrents.gif';
+import badge_zune from '../assets/badges/zune.png';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Welcome to my simple site</h1>
+			<p>
+				This is home to occasional rambling that is too big for social media posts.
+			</p>
+			<div class="badges">
+				<!--Projects/Groups-->
+				<a rel="noreferrer" href="https://milohax.org/" target="_blank"><Image src={badge_milohax} alt="MiloHax" title="MiloHax" /></a>
+				<a rel="noreferrer" href="https://rb3dx.milohax.org/" target="_blank"><Image src={badge_rb3dx} alt="Rock Band 3 Deluxe" title="Rock Band 3 Deluxe" /></a>
+				<a rel="noreferrer" href="https://github.com/rjkiv/dc3-decomp/" target="_blank"><Image src={badge_dc3decomp} alt="Dance Central 3 Decomp" title="Dance Central 3 Decomp" /></a>
+				<a rel="noreferrer" href="https://github.com/darkRTA/rb3/" target="_blank"><Image src={badge_rb3decomp} alt="Rock Band 3 Decomp" title="Rock Band 3 Decomp" /></a>
+				<a rel="noreferrer" href="https://github.com/rjkiv/jeff" target="_blank"><Image src={badge_jeff} alt="Jeff." title="Jeff." /></a>
+				<a rel="noreferrer" href="https://yarg.in/" target="_blank"><Image src={badge_yarg} alt="YARG" title="YARG" /></a>
+				<!--Cool People (who also have 88x31's available)-->
+				<a rel="noreferrer" href="https://dark.ski/" target="_blank"><Image src={badge_dark} alt="Dark" title="Dark" /></a>
+				<a rel="noreferrer" href="https://invoxiplaygames.uk/" target="_blank"><Image src={badge_ipg} alt="invoxiPlayGames" title="invoxiPlayGames" /></a>
+				<a rel="noreferrer" href="https://bsky.app/profile/jnack.milohax.org/" target="_blank"><Image src={badge_jnack} alt="jnack" title="jnack" /></a>
+				<a rel="noreferrer" href="https://github.com/LocalH/" target="_blank"><Image src={badge_localh} alt="LocalH" title="LocalH" /></a>
+				<a rel="noreferrer" href="https://thardwardy.com" target="_blank"><Image src={badge_thardwardy} alt="Thardwardy" title="Thardwardy" /></a>
+				<!--Funny-->
+				<a rel="noreferrer" href="https://uk.webuy.com/product-detail?id=5030930103972&categoryName=3DS-GAMES&superCatName=GAMING&title=&queryID=7E17489933C03C66E08EB7E9D97EFC43&position=3" target="_blank"><Image src={badge_cex} alt="Cex" title="Cex" /></a>
+				<a rel="noreferrer" target="_blank"><Image src={badge_torrents} alt="Seed Your Torrents..." title="Seed Your Torrents..." /></a>
+				<a rel="noreferrer" target="_blank"><Image src={badge_zune} alt="Zune" title="Zune" /></a>
+			</div>
+
+		</main>
+		<Footer />
+	</body>
+</html>
